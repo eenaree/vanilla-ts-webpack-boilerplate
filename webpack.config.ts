@@ -1,6 +1,7 @@
-import * as path from 'node:path';
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
-import * as webpack from 'webpack';
+import path from 'node:path';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack from 'webpack';
 import 'webpack-dev-server';
 import merge from 'webpack-merge';
 
@@ -24,6 +25,7 @@ const commonConfig: webpack.Configuration = {
     ],
   },
   plugins: [
+    new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html'),
     }),

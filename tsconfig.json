@@ -11,7 +11,8 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
+      "esModuleInterop": true
     }
   },
   "include": ["src/**/*"]
